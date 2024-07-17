@@ -1,0 +1,16 @@
+import math
+
+# Функция для вычисления комбинаций
+def nCr(n, r):
+    return math.factorial(n) / (math.factorial(r) * math.factorial(n - r))
+
+# Общее количество возможных комбинаций выбрать 4 числа из 20 выпавших
+total_combinations = nCr(20, 4)
+
+# Количество способов выбрать 4 числа из указанных десяти
+successful_outcomes = nCr(10, 4)
+
+# Вычисление вероятности угадать 4 числа из указанных десяти
+probability = successful_outcomes / total_combinations
+
+print(f"Вероятность угадать 4 числа из указанных десяти: {probability}")
